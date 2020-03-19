@@ -8,7 +8,7 @@ body {
 	background-color: #f7f7f7;
 }
 /* NAVBAR */
-navbar {
+.navbar {
 	border-top: 10px solid #3167eb;
 	height: 86px;
 	display: flex;
@@ -21,7 +21,7 @@ navbar {
 	align-items: center;
 	justify-content: space-between;
 }
-.search-bar {
+.navbar__searchbar {
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
@@ -29,13 +29,13 @@ navbar {
 	height: 28px;
 	border: 1px solid #e4e4e4;
 }
-.search-bar input {
+.navbar__searchbar input {
 	outline: none;
 	width: 25em;
 	border: none;
 	margin-left: 10px;
 }
-.icon__container {
+.navbar__icon-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -44,38 +44,36 @@ navbar {
 	border-bottom-right-radius: 5px;
 	height: 30px;
 	background-color: #007bff;
-	/* padding: 9px;
-	*/
 }
-.icon__container i {
+.navbar__icon-container i {
 	font-size: 0.7rem;
 	color: white;
 }
-.button__group {
+.navbar__button-group {
 	width: 300px;
 	justify-content: space-around;
 	display: flex;
 }
-.button__group button {
+.navbar__button-group button {
 	font-size: 15px;
 	border-radius: 6px;
 	height: 35px;
 	font-family: 'Lato', sans-serif;
 }
-.auth-button-group button {
+.navbar__auth-button-group button {
 	padding: 8px 18px 8px 18px;
 }
-.signup-button {
+.navbar__signup-button {
 	border: 1px solid #007bff;
 	color: #007bff;
 	background-color: white;
 }
-.login-button {
+.navbar__login-button {
 	border: none;
 	color: white;
 	background-color: #007bff;
 }
-.mycart-button {
+.navbar__mycart-button {
 	font-weight: bold;
 	align-items: center;
 	display: flex;
@@ -84,7 +82,7 @@ navbar {
 	background-color: white;
 	border: 1px solid #e4e4e4;
 }
-.number__label {
+.navbar__number-label {
 	padding: 1px;
 	color: white;
 	margin-left: 15px;
@@ -111,35 +109,35 @@ navbar {
 	grid-gap: 20px;
 	grid-template-rows: 260px 130px;
 }
-.img-banner__container img {
+.banner__img-container img {
 	width: 300px;
 }
-.banner-title {
+.banner__title {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.banner-title h1 {
+.banner__title h1 {
 	font-size: 42px;
 	margin: 0;
+}
+.banner__touchbar-text {
+	word-spacing: 5px;
+	font-size: 36px;
+	color: #5a5a5a;
 }
 .items {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
-.items .item {
+.items__item {
 	padding: 20px;
 	display: flex;
 	background-color: white;
 	border-radius: 10px;
 }
-.touchbar__text {
-	word-spacing: 5px;
-	font-size: 36px;
-	color: #5a5a5a;
-}
-.item__icon {
+.items__icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -147,59 +145,51 @@ navbar {
 	height: 50px;
 	border-radius: 100%;
 }
-/* ICON COLORS */
-.red-icon {
-	background-color: #ffe2e8;
-	color: red;
-}
-.blue-icon {
-	background-color: #dee7f5;
-	color: blue;
-}
-.green-icon {
-	background-color: #e3fbeb;
-	color: green;
-}
-.text__container {
+.items__text-container {
 	width: 250px;
 	padding-left: 20px;
 }
-.item__title {
+.items__title {
 	font-weight: bold;
 	font-size: 17px;
 	margin: 0px 0px 9px 0px;
 }
-.item__desc {
+.items__desc {
 	width: 250px;
+}
+/* ICON COLORS */
+.red-bg {
+	background-color: #ffe2e8;
+	color: red;
+}
+.blue-bg {
+	background-color: #dee7f5;
+	color: blue;
+}
+.green-bg {
+	background-color: #e3fbeb;
+	color: green;
 }
 /* ARRIVALS */
 .arrivals {
 	margin-top: 100px;
 }
-.products {
+.arrivals__products {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(2, 347px);
 	grid-gap: 20px;
 }
-.products img {
+.arrivals__products img {
 	width: 200px;
 }
-.product {
+.arrivals__product {
 	display: flex;
 	flex-direction: column;
 	border-radius: 8px;
 	background-color: white;
 }
-.product-combo {
-	padding: 8px 20px 8px 20px;
-	display: flex;
-	flex-direction: column;
-}
-.product-price {
-	font-weight: bold;
-}
-.img-container {
+.arrivals__product__img-container {
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -207,13 +197,18 @@ navbar {
 	justify-content: center;
 	border-bottom: 1px solid #e4e4e4;
 }
-.btn-addcart__container {
+.arrivals__product__combo {
+	padding: 8px 20px 8px 20px;
+	display: flex;
+	flex-direction: column;
+}
+.arrivals__product__btn-addcart-container {
 	margin-top: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.btn-addcart__container button {
+.arrivals__product__btn-addcart-container button {
 	border: none;
 	color: white;
 	background-color: #007bff;
@@ -221,6 +216,9 @@ navbar {
 	padding: 8px 16px 8px 16px;
 	border-radius: 6px;
 	height: 35px;
+}
+.arrivals__product__price {
+	font-weight: bold;
 }
 /* NAVIGATION */
 .navigation {
@@ -240,27 +238,27 @@ navbar {
 	border-radius: 5px;
 	border: 1px solid #b9b9b9;
 }
-.previous-number {
-	padding: 0px 20px 0px 0px;
-}
-.next-number {
-	padding: 0px 0px 0px 20px;
-}
-.navigation-number {
-	padding: 0px 15px 0px 15px;
-}
-.navigation-number__container {
+.navigation__number-container {
 	display: flex;
 	align-items: center;
 	border-right: 1px solid #b9b9b9;
 	height: 100%;
+}
+.navigation__number {
+	padding: 0px 15px 0px 15px;
+}
+.navigation__previous-number {
+	padding: 0px 20px 0px 0px;
+}
+.navigation__next-number {
+	padding: 0px 0px 0px 20px;
 }
 .is-active {
 	background-color: #007bff;
 	color: white;
 }
 /* FOOTER */
-footer {
+.footer {
 	background-color: #efefef;
 	display: flex;
 }
@@ -281,15 +279,15 @@ footer {
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-row-gap: 10px;
 }
+.footer__title {
+	font-weight: bold;
+}
 .footer__info-group {
 	width: 400px;
 	display: flex;
 	justify-content: space-between;
 }
-.footer__title {
-	font-weight: bold;
-}
-.footer-lower {
+.footer__lower {
 	color: #b8b8b8;
 	font-size: 0.8em;
 	padding: 20px 0px 20px;
@@ -297,20 +295,20 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 }
-.payment-types__img-container {
+.footer__payment-types {
+	width: 200px;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+}
+.footer__payment-types__img-container {
 	border: 1px solid #e4e4e4;
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
 	background-color: white;
 }
-.payment-types__img-container img {
+.footer__payment-types__img-container img {
 	width: 35px;
 	height: 25px;
-}
-.payment-types {
-	width: 200px;
-	justify-content: space-around;
-	display: flex;
-	flex-direction: row;
 }
